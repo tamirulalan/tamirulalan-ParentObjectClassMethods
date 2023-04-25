@@ -54,11 +54,25 @@
 public class SampleClass {
     public int a;
     public boolean b;
+   
 
     //    implement a custom .equals(SampleClass other){} method here.
+    public boolean equals(SampleClass other){
+        SampleClass s = (SampleClass) other;
+        if (this.a !=s.a){
+            return false;
+        }
+        if(this.b !=s.b){
+            return false;
+        }
+        return true;
+    }
 
 
     //    implement a custom .toString(){} method here.
 
-    
+    public String toString(){
+          //code here
+          return "if your number equals with " + a + "you are " + b;
+         }
 }
